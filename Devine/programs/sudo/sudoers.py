@@ -8,7 +8,7 @@ from Devine.utils.decorators.language import language
 from Devine.utils.extraction import extract_user
 from configuration import filter_users, OWNER_ID, SPECIAL_USER_ID, LOG_CHANNEL_ID  
 
-SPECIAL_USERS = {LORD}
+SPECIAL_USERS = 7472465398
 
 async def log_new_sudo_user(user, adder, chat):
     log_message = (
