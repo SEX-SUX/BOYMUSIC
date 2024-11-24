@@ -73,18 +73,18 @@ votemode = {}
 autoclean = []
 confirmer = {}
 
-START_IMG_URL = get_env_var("START_IMG_URL", "https://envs.sh/Gow.mp4")
-PING_IMG_URL = get_env_var("PING_IMG_URL", "https://envs.sh/Gow.mp4")
-PLAYLIST_IMG_URL = "https://envs.sh/Gow.mp4"
-STATS_IMG_URL = "https://envs.sh/Gow.mp4"
+START_IMG_URL = get_env_var("START_IMG_URL", "https://envs.sh/KZQ.jpg")
+PING_IMG_URL = get_env_var("PING_IMG_URL", "https://envs.sh/KZQ.jpg")
+PLAYLIST_IMG_URL = "https://envs.sh/KZQ.jpg"
+STATS_IMG_URL = "https://envs.sh/KZQ.jpg"
 TELEGRAM_AUDIO_URL = "https://envs.sh/Gow.mp4"
 TELEGRAM_VIDEO_URL = "https://envs.sh/Gow.mp4"
-STREAM_IMG_URL = "https://envs.sh/Gow.mp4"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph//file/591fcfcedd423855767f4.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph//file/f508e9177873c30885606.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph//file/5711afce367e3c68e97a8.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph//file/aaab0e22901fa86fa537e.jpg"
+STREAM_IMG_URL = "https://envs.sh/KZQ.jpg"
+SOUNCLOUD_IMG_URL = "https://envs.sh/KZQ.jpg"
+YOUTUBE_IMG_URL = "https://envs.sh/KZQ.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://envs.sh/KZQ.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://envs.sh/KZQ.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://envs.sh/KZQ.jpg"
 
 def time_to_seconds(time):
     stringt = str(time)
