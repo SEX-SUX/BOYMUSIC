@@ -36,9 +36,9 @@ async def status_com(client, message: Message, _):
 
 
         if PING_IMG_URL:
-            await message.reply_photo(photo=PING_IMG_URL, caption=status_message, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Devine_Community")]]))
+            await message.reply_photo(photo=PING_IMG_URL, caption=status_message, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/soul_x_network")]]))
         else:
-            await message.reply_text(status_message, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/Devine_Community")]]))
+            await message.reply_text(status_message, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/soul_x_network")]]))
             
         # Protect the message by setting permissions
         if message.chat.type in ["group", "supergroup"]:
