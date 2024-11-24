@@ -3,7 +3,7 @@ from pyrogram import filters
 from pyrogram.enums import ChatType
 from pyrogram.errors import MessageDeleteForbidden, RPCError
 from pyrogram.types import Message
-from Devine.utils.Dev_ban import admin_filter
+from Devine.utils.dev_ban import admin_filter
 from Dev import app
 
 
