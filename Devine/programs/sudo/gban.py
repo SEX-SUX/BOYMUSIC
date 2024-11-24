@@ -40,7 +40,7 @@ async def global_ban(client, message: Message, _):
     elif user.id == app.id:
         return await message.reply_text("<b>‣ ᴡʜʏ sʜᴏᴜʟᴅ ɪ ɢʙᴀɴ ᴍʏsᴇʟғ ?</b>")
     elif user.id in SUDOERS:
-        return await message.reply_text("<b>‣ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢʙᴀɴ ᴀ sᴜᴅᴏ ᴜsᴇʀ.</b>")
+        return await message.reply_text("<b>‣ ʏᴏᴜ ᴄᴀɴ'ᴛ ɢʙᴀɴ ᴀ sᴏᴜʟ ʀᴇᴀᴘᴇʀ.</b>")
     
     is_gbanned = await is_banned_user(user.id)
     if is_gbanned:
@@ -77,7 +77,7 @@ async def global_ban(client, message: Message, _):
         f"<b>• ᴄʜᴀᴛ ʟɪɴᴋ : {link_message} [{message.chat.id}]</b>\n"
         f"<b>• ʙᴀɴɴᴇᴅ ᴜsᴇʀ : {user.mention}</b>\n"
         f"<b>• ʙᴀɴɴᴇᴅ ᴜsᴇʀ ɪᴅ : {user.id}</b>\n"
-        f"<b>• ᴀᴅᴍɪɴ : {message.from_user.mention}</b>\n"
+        f"<b>• sᴏᴜʟ ʀᴇᴀᴘᴇʀ : {message.from_user.mention}</b>\n"
         f"<b>• ᴀғғᴇᴄᴛᴇᴅ ᴄʜᴀᴛs : {number_of_chats}</b>\n"
         f"<b>• {reason_message}</b>"
     )
