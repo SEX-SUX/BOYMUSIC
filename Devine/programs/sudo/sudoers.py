@@ -48,23 +48,23 @@ async def useradd(client, message: Message, language):
 
     user = await extract_user(message)
     if not user:
-        return await message.reply_text("ᴛʜᴇʀᴇ ᴡᴀs ᴀɴ ɪssᴜᴇ ᴇxᴛʀᴀᴄᴛɪɴɢ ᴛʜᴇ ᴜsᴇʀ's ɪɴғᴏʀᴍᴀᴛɪᴏɴ, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
+        return await message.reply_text("ᴛʜᴇʀᴇ ᴡᴀs ᴀɴ ɪssᴜᴇ ᴇxᴛʀᴀᴄᴛɪɴɢ ᴛʜᴇ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
 
     if user.id == OWNER_ID:
         return await message.reply_text("ᴀʀᴇ ᴜ ᴋɪᴅᴅɪɴɢ ɴᴏᴏʙ ? ʜᴇ ɪs ᴍʏ ᴄʀᴇᴀᴛᴏʀ !")
 
     if user.id in SUDOERS:
-        return await message.reply_text(f"{user.mention} ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴀs ᴀ sᴜᴅᴏ ᴜsᴇʀ.")
+        return await message.reply_text(f"{user.mention} ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ᴜɴᴅᴇʀ ᴛʜᴇ ᴛʜɪʀᴛᴇᴇɴ ᴄᴏᴜʀᴛ ɢᴜᴀʀᴅ sǫᴜᴀᴅ.")
 
     added = await add_sudo(user.id)
     if added:
         SUDOERS.add(user.id)
-        await message.reply_text(f"{user.mention} ʜᴀs ʙᴇᴇɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴀs ᴀ sᴜᴅᴏᴇʀ.")
+        await message.reply_text(f"{user.mention} ɪs ɴᴏᴡ ᴀ sᴏᴜʟ ʀᴇᴀᴘᴇʀ.")
         
         await log_new_sudo_user(user, message.from_user, message.chat)
         
     else:
-        await message.reply_text("ᴛʜᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ᴀᴅᴅ ᴛʜᴇ sᴜᴅᴏ ᴜsᴇʀ ᴡᴀs ᴜɴsᴜᴄᴄᴇssғᴜʟ. ᴘʟᴇᴀsᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴀɢᴀɪɴ.")
+        await message.reply_text("ᴛʜᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ᴀᴅᴅ ᴛʜᴇ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ᴡᴀs ᴜɴsᴜᴄᴄᴇssғᴜʟ. ᴘʟᴇᴀsᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴀɢᴀɪɴ.")
 
 @app.on_message(filters.command(["delsudo", "rmsudo", "removerand", "removesudo"]) & filters.user([OWNER_ID, SPECIAL_USER_ID]))
 @language
@@ -74,30 +74,30 @@ async def userdel(client, message: Message, language):
 
     user = await extract_user(message)
     if not user:
-        return await message.reply_text("ᴛʜᴇʀᴇ ᴡᴀs ᴀɴ ɪssᴜᴇ ᴇxᴛʀᴀᴄᴛɪɴɢ ᴛʜᴇ ᴜsᴇʀ's ɪɴғᴏʀᴍᴀᴛɪᴏɴ, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
+        return await message.reply_text("ᴛʜᴇʀᴇ ᴡᴀs ᴀɴ ɪssᴜᴇ ᴇxᴛʀᴀᴄᴛɪɴɢ ᴛʜᴇ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
 
     if user.id == OWNER_ID:
         return await message.reply_text("ᴀʀᴇ ᴜ ᴋɪᴅᴅɪɴɢ ɴᴏᴏʙ ? ʜᴇ ɪs ᴍʏ ᴄʀᴇᴀᴛᴏʀ !")
 
     if user.id not in SUDOERS:
-        return await message.reply_text(f"{user.mention} ɪs ɴᴏᴛ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴛᴏ ᴜsᴇ sᴜᴅᴏ.")
+        return await message.reply_text(f"{user.mention} ɪs ɴᴏᴛ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴛᴏ ᴜsᴇ ᴛʜᴇ ᴘᴏᴡᴇʀ ᴏғ sᴏᴜʟ ʀᴇᴀᴘᴇʀs.")
 
     removed = await remove_sudo(user.id)
     if removed:
         SUDOERS.remove(user.id)
-        await message.reply_text(f"sᴜᴅᴏ ᴀᴄᴄᴇss ғᴏʀ {user.mention} ʜᴀs ʙᴇᴇɴ ʀᴇᴠᴏᴋᴇᴅ.")
+        await message.reply_text(f"ᴛʜᴇ ᴘᴏᴡᴇʀ ᴏғ sᴏᴜʟ ʀᴇᴀᴘᴇʀs ғᴏʀ {user.mention} ʜᴀs ʙᴇᴇɴ ᴛᴀᴋᴇɴ.")
         
         await log_removed_sudo_user(user, message.from_user, message.chat)
         
     else:
-        await message.reply_text("ᴛʜᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜᴇ sᴜᴅᴏ ᴜsᴇʀ ᴡᴀs ᴜɴsᴜᴄᴄᴇssғᴜʟ. ᴘʟᴇᴀsᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴀɢᴀɪɴ.")
+        await message.reply_text("ᴛʜᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜᴇ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ᴡᴀs ᴜɴsᴜᴄᴄᴇssғᴜʟ. ᴘʟᴇᴀsᴇ ᴀᴛᴛᴇᴍᴘᴛ ᴀɢᴀɪɴ.")
 
 
 @app.on_message(filters.command(["sudolist", "sudoers", "specialusers"]) & ~filter_users)
 @language
 async def sudoers_list(client, message: Message, language):
     if message.from_user.id != OWNER_ID and message.from_user.id not in SUDOERS:
-        return await message.reply_text("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴄᴄᴇss ᴛᴏ ᴜsᴇ ᴛʜɪs.\nᴠɪsɪᴛ @devine_support")
+        return await message.reply_text("ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴄᴄᴇss ᴛᴏ ᴜsᴇ ᴛʜɪs.\nᴠɪsɪᴛ @Soul_x_society")
 
     text = "<b>👑 ᴅɪsᴀsᴛᴇʀs ᴏғ ᴀɴᴏᴛʜᴇʀ ʟᴇᴠᴇʟ.</b>\n\n"
     text += "<b>๏ ᴍʏ ʟᴏʀᴅ</b>\n"
@@ -105,7 +105,7 @@ async def sudoers_list(client, message: Message, language):
     user = user.first_name if not hasattr(user, "mention") else user.mention
     text += f"{user}\n\n"
     
-    text += "<b>🔱 sᴘᴇᴄɪᴀʟ ᴅɪsᴀsᴛᴇʀs</b>\n"
+    text += "<b>🔱 sᴜʙsᴛɪᴛᴜᴛᴇ ʟᴏʀᴅ</b>\n"
     user = await app.get_users(LORD)
     user = user.first_name if not hasattr(user, "mention") else user.mention
     text += f"‣ {user}\n\n"
