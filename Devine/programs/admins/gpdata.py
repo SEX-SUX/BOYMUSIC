@@ -1,10 +1,10 @@
 from pyrogram import enums
 from pyrogram.enums import ChatType
 from pyrogram import filters, Client
-from AnonXMusic import app
+from Dev import app
 from config import OWNER_ID
 from pyrogram.types import Message
-from AnonXMusic.utils.jarvis_ban import admin_filter
+from Devine.utils.Dev_ban import admin_filter
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 
