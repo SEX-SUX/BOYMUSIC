@@ -41,7 +41,7 @@ async def awake(_, message: Message):
         InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=configuration.SUPPORT_CHAT),
     ],
     [
-        InlineKeyboardButton(text="ᴀᴅᴅ ɪɴ ɢʀᴏᴜᴘ", url="https://t.me/{app.username}?startgroup=true"),
+        InlineKeyboardButton(text="ᴀᴅᴅ ɪɴ ɢʀᴏᴜᴘ", url="https://t.me/Soul_musixbot?startgroup=true"),
     ],
     ]    
     
