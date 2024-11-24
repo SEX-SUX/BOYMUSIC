@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ChatPermi
 from pyrogram.errors.exceptions.bad_request_400 import ChatAdminRequired, UserAdminInvalid, BadRequest
 
 import datetime
-from AnonXMusic import app
+from Dev import app
 
 def mention(user, name, mention=True):
     if mention:
@@ -27,7 +27,7 @@ async def ban_user(user_id, first_name, admin_id, admin_name, chat_id, reason, t
     except UserAdminInvalid:
         return "I won't ban an admin bruh!!", False
     except Exception as e:
-        if user_id == 7059759820:
+        if user_id == 7404841712:
             return "Why should I ban myself? Sorry but I'm not stupid like you", False
         return f"Oops!!\n{e}", False
 
