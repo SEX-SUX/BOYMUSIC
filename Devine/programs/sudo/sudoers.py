@@ -12,7 +12,7 @@ SPECIAL_USERS = {LORD}
 
 async def log_new_sudo_user(user, adder, chat):
     log_message = (
-        f"<b>{user.mention} ʜᴀs ʙᴇᴇɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴀs ᴀ sᴜᴅᴏᴇʀ.\n\n</b>"
+        f"<b>{user.mention} ʜᴀs ʙᴇᴇɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴀs ᴀ sᴏᴜʟ ʀᴇᴀᴘᴇʀ.\n\n</b>"
         f"<b>ᴜsᴇʀ ᴅᴀᴛᴀ -\n</b>"
         f"<b>ɪᴅᴇɴᴛɪғɪᴇʀ ⌯ <code>{user.id}</code></b>\n"
         f"<b>ʜᴀɴᴅʟᴇ ⌯ @{user.username if user.username else 'none'}</b>\n\n"
@@ -27,11 +27,11 @@ async def log_new_sudo_user(user, adder, chat):
 
 async def log_removed_sudo_user(user, remover, chat):
     log_message = (
-        f"<b>ᴀᴄᴄᴇss {user.mention} ʜᴀs ʙᴇᴇɴ ʀᴇᴠᴏᴋᴇᴅ.</b>\n\n"
+        f"<b>sᴏᴜʟ ʀᴇᴀᴘᴇʀ ᴀᴄᴄᴇss {user.mention} ʜᴀs ʙᴇᴇɴ ʀᴇᴠᴏᴋᴇᴅ.</b>\n\n"
         f"<b>ᴜsᴇʀ ᴅᴀᴛᴀ -\n</b>"
         f"<b>ɪᴅᴇɴᴛɪғɪᴇʀ ⌯ <code>{user.id}</code></b>\n"
         f"<b>ʜᴀɴᴅʟᴇ ⌯ @{user.username if user.username else 'none'}</b>\n\n"
-        f"<b>ᴀᴄᴄᴇss ʀᴇᴠᴏᴋᴇᴅ ʙʏ {remover.mention}</b>\n"
+        f"<b>sᴏᴜʟ ʀᴇᴀᴘᴇʀ ᴀᴄᴄᴇss ʀᴇᴠᴏᴋᴇᴅ ʙʏ {remover.mention}</b>\n"
         f"<b>ɪᴅᴇɴᴛɪғɪᴇʀ ⌯ </b><code>{remover.id}</code>\n\n"
         f"<b>ᴀʙᴏᴜᴛ ᴄʜᴀᴛ -\n"
         f"<b>ᴅᴇsɪɢɴᴀᴛɪᴏɴ ⌯ {chat.title}</b>\n"
@@ -110,9 +110,9 @@ async def sudoers_list(client, message: Message, language):
     user = user.first_name if not hasattr(user, "mention") else user.mention
     text += f"‣ {user}\n\n"
 
-    text += "<b>❄️ sᴜᴅᴏᴇʀs</b>\n"
+    text += "<b>❄️ sᴏᴜʟ ʀᴇᴀᴘᴇʀ</b>\n"
     if not SUDOERS:
-        text += "ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ sᴜᴅᴏᴇʀs ᴄᴜʀʀᴇɴᴛʟʏ."
+        text += "ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ᴄᴜʀʀᴇɴᴛʟʏ."
     else:
         for sudo_id in SUDOERS:
             if sudo_id == OWNER_ID:
@@ -138,11 +138,11 @@ async def welcome_special_users(client, update: ChatMemberUpdated):
         chat = update.chat
 
         if user_id == OWNER_ID:
-            message = f"🔱 ᴍʏ ʟᴏʀᴅ ɪs ɴᴏᴡ ᴘᴀʀᴛ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ."
+            message = f"🔱 ʟᴏʀᴅ ᴀɪᴢᴇɴ ɪs ɴᴏᴡ ᴘᴀʀᴛ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ."
         elif user_id in SPECIAL_USERS:
             message = f"🔱 ᴍʏ ʟᴏʀᴅ ɪs ɴᴏᴡ ᴘᴀʀᴛ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ."
         elif user_id in SUDOERS:
-            message = f"❄️ ɢʟᴏʙᴀʟ ᴀᴅᴍɪɴ ɪs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ ɴᴏᴡ."
+            message = f"❄️ ᴀ sᴏᴜʟ ʀᴇᴀᴘᴇʀ ɪs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ ɴᴏᴡ."
         else:
             return  
         await client.send_message(chat.id, message)
