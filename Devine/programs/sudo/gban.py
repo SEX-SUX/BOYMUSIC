@@ -25,7 +25,7 @@ LOG_CHANNEL_ID = -1002303365261
 def owner_or_special_user(_, __, message):
     return message.from_user.id in {OWNER_ID, SPECIAL_USER_ID}
     
-@app.on_message(filters.command(["gban", "globalban"]) & filter.creator(owner_or_special_user))
+@app.on_message(filters.command(["gban", "globalban"]) & filter.users(owner_or_special_user))
 @language
 async def global_ban(client, message: Message, _):
     if not message.reply_to_message and len(message.command) < 2:
