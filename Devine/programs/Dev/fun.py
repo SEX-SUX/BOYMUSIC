@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from nekosbest import Client as DevineClient
+from Devine import Client as DevineClient
 from Devine import app as devine
 
 neko_client = DevineClient()
