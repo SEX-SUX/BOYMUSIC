@@ -1,10 +1,10 @@
 from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from Aizen import app
-from Aizen.root.call import Aizen
-from Aizen.utils import system_sys_stats
-from Aizen.utils.decorators.language import language
+from Dev import app
+from Devine.root.call import Aizen
+from Devine.utils import system_sys_stats
+from Devine.utils.decorators.language import language
 from configuration import filter_users, SUPPORT_CHANNEL, SUPPORT_CHAT
 
 
