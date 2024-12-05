@@ -2,7 +2,7 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from Dev import app
-from Devine.root.call import Aizen
+from Devine.root.call import Devine
 from Devine.utils import system_sys_stats
 from Devine.utils.decorators.language import language
 from configuration import filter_users, SUPPORT_CHANNEL, SUPPORT_CHAT
