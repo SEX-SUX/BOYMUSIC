@@ -17,21 +17,21 @@ API_HASH = "81b0b8063ee70c1475e95e58d06e15ee"
 
 BOT_TOKEN = "7404841712:AAFyZbtMaCY0UnwYbZeoEpZ0ppuDv9z5icc"
 
-BOT_ID = 7404841712
+BOT_ID = 6754241147
 
-BOT_USERNAME = "soul_musixbot"
+BOT_USERNAME = "HIMANSHI_MUSIC_BOT"
 
 MONGO_DB_URI = "mongodb+srv://aizenxmongo:0vmRucmzTP26cKTs@cluster0.nlvql.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 DURATION_LIMIT_MIN = int(get_env_var("DURATION_LIMIT", 500000))
 
-LOGGER_ID = int(get_env_var("LOGGER_ID", -1002070231017))
+LOGGER_ID = int(get_env_var("LOGGER_ID", -1002090474484))
 
-LOG_CHANNEL_ID = -1002303365261
+LOG_CHANNEL_ID = -1002090474484
 
-OWNER_ID = 6806897901
+OWNER_ID = 5959548791
 
-SPECIAL_USER_ID = 7472465398
+SPECIAL_USER_ID = 5959548791
 
 HEROKU_APP_NAME = "developer4"
 
@@ -43,9 +43,9 @@ UPSTREAM_BRANCH = None
 
 GIT_TOKEN = None
 
-SUPPORT_CHANNEL = "https://t.me/soul_x_network"
+SUPPORT_CHANNEL = "https://t.me/+Ckzm2ypQyIIzZTll"
 
-SUPPORT_CHAT = "https://t.me/soul_x_society"
+SUPPORT_CHAT = "https://t.me/SANATANI_TECH"
 
 AUTO_LEAVING_ASSISTANT = bool(get_env_var("AUTO_LEAVING_ASSISTANT", False))
 
